@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="icon" href="/eclipse.png">
+    <title>Encriptador de texto</title>
+</head>
+<body>
+    <!-- Eclipses -->
+    <div class="container">
+        <div class="circles">
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:23"></span>
+            <span style="--i:18"></span>
+            <span style="--i:25"></span>
+            <span style="--i:15"></span>
+            <span style="--i:10"></span>
+            <span style="--i:14"></span>
+            <span style="--i:17"></span>
+            <span style="--i:15"></span>
+            <span style="--i:16"></span>
+            <span style="--i:22"></span>
+            <span style="--i:27"></span>
+            <span style="--i:19"></span>
+            <span style="--i:20"></span>
+            <span style="--i:29"></span>
+            <span style="--i:30"></span>
+            <span style="--i:11"></span>
+            <span style="--i:13"></span>
+            <span style="--i:16"></span>
+            <span style="--i:32"></span>
+            <span style="--i:22"></span>
+            <span style="--i:18"></span>
+            <span style="--i:10"></span>
+            <span style="--i:12"></span>
+            <span style="--i:35"></span>
+            <span style="--i:34"></span>
+            <span style="--i:23"></span>
+            <span style="--i:28"></span>
+            <span style="--i:13"></span>
+            <span style="--i:11"></span>
+            <span style="--i:17"></span>
+            <span style="--i:25"></span>
+            <span style="--i:12"></span>
+            <span style="--i:29"></span>
+            <span style="--i:24"></span>
+            <span style="--i:27"></span>
+            <span style="--i:15"></span>
+            <span style="--i:11"></span>
+            <span style="--i:21"></span>
+            <span style="--i:23"></span>
+            <span style="--i:15"></span>
+            <span style="--i:27"></span>
+            <span style="--i:10"></span>
+            <span style="--i:11"></span>
+        </div>
+    </div>
+
+    <div class="container-modal">
+        <div class="modal" id="modal-1">
+            <img src="cross_circle_delete_remove_icon_177305.png" alt="success">
+            <p>No se encontró ningún mensaje</p>
+            <button id="cerrar" onclick="cerrar1()">Cerrar</button>
+        </div>
+
+        <div class="modal" id="modal-2">
+            <img src="check_circle_icon_177313.png" alt="success">
+            <p>El texto fue copiado</p>
+            <button id="cerrar" onclick="cerrar2()">Cerrar</button>
+        </div>
+
+        <div class="modal" id="modal-3">
+            <img src="error_warning_icon_177163.png" alt="success">
+            <p>No hay texto para copiar</p>
+            <button id="cerrar" onclick="cerrar3()">Cerrar</button>
+        </div>
+    </div>
+
+    <main class="main">
+        <section class="section">
+            <textarea class="input" id="input" name="entrada" cols="30" rows="10" onkeyup="this.value=this.value.toLowerCase()" placeholder="escribe tu mensaje"></textarea>
+
+            <div class="container-aviso">
+            <p class="aviso">Solo letras minúsculas y sin acentos</p>
+            </div>
+
+            <div class="container-btn">
+            <button class="btn" id="encriptador" onclick="encriptar()" >Encriptar</button>
+            <button class="btn" id="desencriptador" onclick="desencriptar()">Desencriptar</button>
+            </div>
+        </section>
+        <section class="section">
+            <textarea class="output" id="output" name="salida" cols="30" rows="10" readonly></textarea>
+            <div class="container-btn">
+            <button class="btn" onclick="copiar()">Copiar</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
